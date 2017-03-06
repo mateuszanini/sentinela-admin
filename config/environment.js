@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'sentinela-admin',
     environment: environment,
@@ -20,6 +20,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    //Adicionando o EmberFire ao projeto
+    firebase: {
+      apiKey: "AIzaSyDa5cXXxDgmmqF3L7RBp1e25v8O5kTiOGw",
+      authDomain: "sentinela-admin.firebaseapp.com",
+      databaseURL: "https://sentinela-admin.firebaseio.com",
+      storageBucket: "sentinela-admin.appspot.com",
+      messagingSenderId: "467179263821"
     }
   };
 
