@@ -1,8 +1,78 @@
-{{!-- The following component displays Ember's default welcome message.
-{{welcome-page}}
-Feel free to remove this! --}}
+{{!-- The following component displays Ember's default welcome message. {{welcome-page}} Feel free to remove this!
 <div class="container">
-  <div class="body">
-    {{outlet}}
-  </div>
+    <div class="body">
+        {{outlet}}
+    </div>
+</div>--}}
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button> {{#link-to 'index' class="navbar-brand"}} <span>Sentinela</span> Admin {{/link-to}}
+            <ul class="user-menu">
+                <li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user" aria-hidden="true"></i> Mateus Zanini <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li>
+            {{#link-to 'home'}} <i class="fa fa-home" aria-hidden="true"></i> Home {{/link-to}}
+        </li>
+        <li>
+            {{#link-to 'login'}} <i class="fa fa-unlock-alt" aria-hidden="true"></i> Login {{/link-to}}
+        </li>
+        <li class="parent ">
+            <a href="#">
+                <span data-toggle="collapse" href="#sub-item-1"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>                Dropdown
+            </a>
+            <ul class="children collapse" id="sub-item-1">
+                <li>
+                    <a class="" href="#">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i> Sub Item 1
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i> Sub Item 2
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i> Sub Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--<li role="presentation" class="divider"></li>-->
+
+    </ul>
+    <div class="attribution">&copy; Sentinela 2017</div>
 </div>
+<!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    {{outlet}}
+</div>
+<!--/.main-->

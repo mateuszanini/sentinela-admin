@@ -37,5 +37,11 @@ module.exports = function (defaults) {
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.woff2', {
     destDir: 'fonts'
   });
+
+
+  //Template Lumino Admin -> https://goo.gl/fsjapb
+  app.import('app/styles/styles.css');
+  app.import('app/styles/datepicker3.css');
+
   return app.toTree();
 };
