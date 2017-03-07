@@ -20,5 +20,14 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  //JQuery
+  app.import('bower_components/jquery/dist/jquery.min.js');
+  //Bootstrap
+  app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');  
+  //FontAwesome
+  app.import('app/styles/app.css');
+  //app.import('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
   return app.toTree();
 };
