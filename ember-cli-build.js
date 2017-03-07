@@ -20,13 +20,13 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('app/styles/app.css');
   //JQuery
   app.import('bower_components/jquery/dist/jquery.min.js');
   //Bootstrap
   app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
   app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
   //FontAwesome
-  app.import('app/styles/app.css');
   app.import('bower_components/components-font-awesome/css/font-awesome.css');
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.ttf', {
     destDir: 'fonts'
