@@ -2,7 +2,7 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
@@ -24,10 +24,18 @@ module.exports = function(defaults) {
   app.import('bower_components/jquery/dist/jquery.min.js');
   //Bootstrap
   app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');  
+  app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
   //FontAwesome
   app.import('app/styles/app.css');
-  //app.import('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
+  app.import('bower_components/components-font-awesome/css/font-awesome.css');
+  app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.ttf', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.woff2', {
+    destDir: 'fonts'
+  });
   return app.toTree();
 };
