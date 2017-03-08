@@ -73,6 +73,13 @@
 <!--/.sidebar-->
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    {{#if session.isAuthenticated}}
+                <button
+                    class='btn btn-default navbar-btn'
+                    {{action 'signOut'}}
+                >Sign Out
+                </button>
+            {{/if}}
     {{outlet}}
 </div>
 <!--/.main-->
