@@ -29,6 +29,11 @@ module.exports = function (environment) {
       databaseURL: "https://sentinela-admin.firebaseio.com",
       storageBucket: "sentinela-admin.appspot.com",
       messagingSenderId: "467179263821"
+    },
+
+    //Torii para autenticação
+    torii: {
+      sessionServiceName: 'session'
     }
   };
 
