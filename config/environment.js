@@ -24,11 +24,11 @@ module.exports = function (environment) {
 
     //Adicionando o EmberFire ao projeto
     firebase: {
-      apiKey: "AIzaSyDa5cXXxDgmmqF3L7RBp1e25v8O5kTiOGw",
-      authDomain: "sentinela-admin.firebaseapp.com",
-      databaseURL: "https://sentinela-admin.firebaseio.com",
-      storageBucket: "sentinela-admin.appspot.com",
-      messagingSenderId: "467179263821"
+      apiKey: "AIzaSyDmTM3FMbTk9Agvb8A7h3slNcZ_TD8mW1A",
+      authDomain: "optativa-4f19a.firebaseapp.com",
+      databaseURL: "https://optativa-4f19a.firebaseio.com",
+      storageBucket: "optativa-4f19a.appspot.com",
+      messagingSenderId: "675752807270"
     },
 
     //Torii para autenticação
