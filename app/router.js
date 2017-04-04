@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('home');
   this.route('sign-up');
   this.route('sign-in');
+  this.route('empresas');
 });
 
 export default Router;
