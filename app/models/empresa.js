@@ -1,20 +1,33 @@
-import DS from 'ember-data';
-
-export default DS.Model.extend({
-    nomeFantasia: DS.attr('string'),
-    razaoSocial: DS.attr('string'),
-    cnpj: DS.attr('string'),
-    inscricaEstadual: DS.attr('string'),
-    inscricaoMunicipal: DS.attr('string'),
+var EmpresaModel = function () {
+    this.nomeFantasia = null;
+    this.razaoSocial = null;
+    this.cnpj = null;
+    this.inscricaEstadual = null;
+    this.inscricaoMunicipal = null;
     //campos de controle
-    ativo: DS.attr('boolean', { defaultValue: true }),
-    createdAt: DS.attr('number', {
-        defaultValue() { return new Date().getTime(); }
-    }),
-    updatedAt: DS.attr('number'),
+    this.ativo = null;
+    this.createdAt = null;
+    this.updatedAt = null;
     //relacionamentos
-    telefone: DS.belongsTo('telefone'),
-    email: DS.belongsTo('email'),
-    endereco: DS.belongsTo('endereco'),
-    usuarios: DS.hasMany('usuario', { async: true, inverse: null }),
-});
+    this.telefones = new TelefoneModel();
+    this.email = [];
+    this.endereco = new EnderecoModel();
+    
+    this.save = function () {
+        alert('save');
+
+        // Cria uma chave para a empresa
+        var newEmpresaKey = firebase.database().ref().child('empresas').push().key;
+
+        //cria uma chave para cada 
+for (var i = 0; i < arrayLength; i++) {
+
+
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        var updates = {};
+        updates['/posts/' + newPostKey] = postData;
+        updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+        return firebase.database().ref().update(updates);
+    }
+};
