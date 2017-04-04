@@ -1,35 +1,39 @@
 <div class="row">
-    <ol class="breadcrumb">
-        <li>
-            Login
-        </li>
-    </ol>
-</div>
-
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Tela de Login</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-lg-4">
-        <div class="panel panel-default">
+    <div class="col-lg-4 col-lg-offset-5">
+        <div class="panel panel-default" id="painelLogin">
             <div class="panel-body">
 
                 <form>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                        {{input
+                            type='email'
+                            class='form-control'
+                            value=email
+                            placeholder='Email'
+                        }}
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="loginSenha" placeholder="Senha">
+                        {{input
+                            type='password'
+                            class='form-control'
+                            value=password
+                            placeholder='Senha'
+                        }}
                     </div>
-                    <a href="" {{action "login"}} class="btn btn-primary col-lg-12 col-sm-12 col-md-12"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                    {{#if session.isWorking}}
+                        <a href="" disabled="disabled" class="btn btn-primary col-lg-12 col-sm-12 col-md-12">
+                            <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i> Logando</a>
+                    {{else}}
+                        <a href="" {{action 'login' 'password'}} class="btn btn-primary col-lg-12 col-sm-12 col-md-12"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                    {{/if}}
+                    
                 </form>
 
             </div>
         </div>
-
+    </div>
+</div>
+<!--
         <div class='page-header'>
             <h1>You must be signed in to use this app</h1>
         </div>
@@ -37,6 +41,4 @@
             {{#link-to 'sign-up' class='list-group-item'}} Sign Up {{/link-to}} {{#link-to 'sign-in' class='list-group-item'}} Sign In
             {{/link-to}}
         </div>
-
-    </div>
-</div>
+-->
